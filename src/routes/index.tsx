@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import post from "@/assets/post.jpeg.asset.json";
 
-const LINK = "https://image-based-design-m6ya.vercel.app/";
+const LINK = "https://wa.me/5535999168025";
 
 export const Route = createFileRoute("/")({
   head: () => ({
