@@ -1,24 +1,28 @@
 import { createFileRoute } from "@tanstack/react-router";
+import post from "@/assets/post.jpeg.asset.json";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const LINK = "https://image-based-design-m6ya.vercel.app/";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Sites Profissionais e Personalizados" },
+      { name: "description", content: "Criamos sites profissionais, modernos e 100% personalizados para o seu negócio." },
+      { property: "og:title", content: "Seu negócio na internet!" },
+      { property: "og:description", content: "Sites profissionais e personalizados para qualquer negócio." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="flex min-h-screen items-center justify-center bg-background">
+      <a href={LINK} target="_blank" rel="noopener noreferrer" className="block w-full max-w-[1024px]">
+        <img src={post.url} alt="Seu negócio na internet — clique para ver mais" className="h-auto w-full" />
+      </a>
+    </main>
   );
 }
