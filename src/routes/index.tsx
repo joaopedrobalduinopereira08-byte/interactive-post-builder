@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import post from "@/assets/post.jpeg.asset.json";
 
-const LINK = "https://wa.me/5535999168025";
+const LINK = "https://wa.me/5535997388338";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,7 +40,7 @@ function Index() {
         <WhatsAppIcon className="h-8 w-8" />
         <span className="flex flex-col leading-tight">
           <span className="text-xs font-semibold uppercase tracking-wider">Fale no WhatsApp</span>
-          <span className="text-2xl font-extrabold">(35) 99916-8025</span>
+          <span className="text-2xl font-extrabold">(35) 99738-8338</span>
         </span>
       </a>
     </main>
